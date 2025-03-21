@@ -1,13 +1,13 @@
-nums = []
+num = []
 ls = input().split()
 for i in ls:
-    nums.append(int(i))
+    num.append(int(i))
 target = int(input())
-def twoSum(nums, target):
+def twoSum(num, target):
     left = 0
-    right = len(nums)-1
+    right = len(num)-1
     while left < right:
-        a = nums[left]+nums[right]
+        a = num[left]+num[right]
         if a == target:
             return [left, right]
         elif a > target:
@@ -15,4 +15,4 @@ def twoSum(nums, target):
         elif a < target:
             left += 1
     return[]
-print(twoSum(nums, target))
+print(twoSum(num, target))
